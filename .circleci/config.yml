@@ -11,6 +11,5 @@ jobs:
      - run: |
          nix-env -i git
          git clone https://github.com/NixOS/nixpkgs.git
-         cd nixpkgs/nixos
+         cd nixpkgs
          nix-build -A netboot nixos/release.nix
-
