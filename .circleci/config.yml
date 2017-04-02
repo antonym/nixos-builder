@@ -5,6 +5,7 @@ jobs:
       - image: nixos/nix:latest
         environment:
           - ENV: CI
+    working_directory: /
 
     steps:
      - run: |
