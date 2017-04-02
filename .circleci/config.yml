@@ -9,4 +9,6 @@ jobs:
 
     steps:
      - run: |
+         wget https://raw.githubusercontent.com/NixOS/nixpkgs/master/nixos/release.nix
          nix-build -A netboot nixos/release.nix
+
