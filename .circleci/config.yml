@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: nixos/nix:latest
+        environment:
+          - ENV: CI
+
+    steps:
+     - run: |
+         nix-build -A netboot nixos/release.nix
