@@ -9,6 +9,8 @@ jobs:
 
     steps:
      - run: |
-         wget https://raw.githubusercontent.com/NixOS/nixpkgs/master/nixos/release.nix
+         nix-env -i git
+         git clone https://github.com/NixOS/nixpkgs.git
+         cd nixpkgs/nixos
          nix-build -A netboot nixos/release.nix
 
