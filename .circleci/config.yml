@@ -13,6 +13,7 @@ jobs:
          git clone https://github.com/NixOS/nixpkgs.git
          cd nixpkgs
          nix-build -A netboot nixos/release.nix
-         ls -la result
          cat result/netboot.ipxe
-         sha256sum result/*
+         sha256sum result/bzImage >> result/sha256.txt
+         sha256sum result/initrd >> result/sha256.txt
+         cat result/sha256.txt
